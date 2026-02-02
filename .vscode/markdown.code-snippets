@@ -1,0 +1,56 @@
+{
+  "Quartz 4 Frontmatter": {
+    "scope": "markdown",
+    "prefix": ["frontmatter", "fm", "quartz"],
+    "body": [
+      "---",
+      "title: \"${1:Page Title}\"",
+      "description: \"${2:Brief description of the page}\"",
+      "date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "draft: ${3|false,true|}",
+      "tags:",
+      "  - ${4:tag1}",
+      "  - ${5:tag2}",
+      "aliases:",
+      "  - \"${6:Alternative Name}\"",
+      "permalink: \"${7:/custom-url}\"",
+      "enableToc: ${8|true,false|}",
+      "lang: \"${9:en}\"",
+      "publish: ${10|true,false|}",
+      "---",
+      "",
+      "$0"
+    ],
+    "description": "Insert Quartz 4 frontmatter template with all common fields"
+  },
+  "Basic Quartz Frontmatter": {
+    "scope": "markdown",
+    "prefix": ["basic", "simple"],
+    "body": [
+      "---",
+      "title: \"${1:Page Title}\"",
+      "date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "tags:",
+      "  - ${2:tag}",
+      "---",
+      "",
+      "$0"
+    ],
+    "description": "Insert basic Quartz frontmatter with essential fields"
+  },
+  "Empty Quartz Template": {
+    "scope": "markdown",
+    "prefix": ["template", "new"],
+    "body": [
+      "---",
+      "title: \"${TM_FILENAME_BASE}\"",
+      "date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "draft: false",
+      "tags: []",
+      "---",
+      "",
+      "$0"
+    ],
+    "description": "Create new note with automatic title from filename"
+  }
+}
